@@ -1,0 +1,7 @@
+WebAPI/RestWebApiServer/webapiproject/__pycache__/
+WebAPI/RestWebApiServer/.vscode/
+WebAPI/RestWebApiServer/modules/ImageProcessing/__pycache__/
+WebAPI/RestWebApiServer/modules/
+WebAPI/RestWebApiServer/restapiapp/__pycache__/
+WebAPI/RestWebApiServer/restapiapp/migrations/__pycache__/
+WebAPI/RestWebApiServer/db.sqlite3
