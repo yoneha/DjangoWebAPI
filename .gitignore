@@ -1,7 +1,9 @@
-WebAPI/RestWebApiServer/webapiproject/__pycache__/
+*.pyc
+*~
+__pycache__
+myvenv
+db.sqlite3
+/static
+.DS_Store
 WebAPI/RestWebApiServer/.vscode/
-WebAPI/RestWebApiServer/modules/ImageProcessing/__pycache__/
 WebAPI/RestWebApiServer/modules/
-WebAPI/RestWebApiServer/restapiapp/__pycache__/
-WebAPI/RestWebApiServer/restapiapp/migrations/__pycache__/
-WebAPI/RestWebApiServer/db.sqlite3
