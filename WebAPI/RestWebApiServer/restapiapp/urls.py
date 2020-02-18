@@ -13,6 +13,6 @@ from .views import seats_info, sitting_status_info, schedule_info
 
 urlpatterns = [
     path('seatinfo/shinyoko13FS', seats_info),
-    path('sittingstatus/<str:id>', sitting_status_info),
-    path('schedule/<str:id>', schedule_info),
+    path('sittingstatus', sitting_status_info),
+    path('schedule', schedule_info),
 ]
