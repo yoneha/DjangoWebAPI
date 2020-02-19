@@ -95,7 +95,7 @@ def sitting_status_info(request):
   items = SeatInfo.objects.all()
   
   json = {
-    "seatStatus":
+    "status":
     [
       {
         "id": items[0].seatID,
