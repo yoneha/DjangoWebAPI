@@ -25,7 +25,6 @@ SECRET_KEY = 'r!n4r(v943yc7fwq&839n@pfnh5=viniv))pbbb&tm9cby^vc8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -126,7 +125,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Pythonanywhere用の設定を追加
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
