@@ -24,6 +24,20 @@ from django.shortcuts import render
 import json
 
 def upload_img(request):
+  items = SeatInfo.objects.get(seatID='seat-0100001')
+  if request.method == 'POST':
+    print(items.status)
+    items.status = "Attend"
+    items.save()
+    print('this is POST method')
+    print(items.status)
+  else:
+    print(items.status)
+    items.status = "Absent"
+    items.save()
+    print('this is not post method')
+    print(items.status)
+
   return render(request, 'upload_img.html',)
 
 
