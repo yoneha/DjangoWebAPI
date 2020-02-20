@@ -1,7 +1,7 @@
 <h2>成果発表用</h2>
 <h3>ファイルアップロード：</h3>
-<form method="POST">
+<form method="POST">{% csrf_token %}
     <input type="file" id="myImage" accept="image/*">
 
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Upload</button>
 </form>

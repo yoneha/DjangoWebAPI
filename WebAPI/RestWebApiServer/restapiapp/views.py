@@ -2,7 +2,7 @@
 import django_filters
 from rest_framework import viewsets, filters
 
-from .models import User, Entry, SeatInfo
+from .models import User, Entry, SeatInfo, SeikaHappyouCnt
 from .serializer import UserSerializer, EntrySerializer, SeatInfoSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -23,20 +23,58 @@ from rest_framework.decorators import api_view
 from django.shortcuts import render
 import json
 
+
+
 def upload_img(request):
-  items = SeatInfo.objects.get(seatID='seat-0100001')
+  cnt = SeikaHappyouCnt.objects.get(pk=1)
+  item3 = SeatInfo.objects.get(seatID='seat-0100003')
+  item4 = SeatInfo.objects.get(seatID='seat-0100004')
+  item5 = SeatInfo.objects.get(seatID='seat-0100005')
+  item6 = SeatInfo.objects.get(seatID='seat-0100006')
   if request.method == 'POST':
-    print(items.status)
-    items.status = "Attend"
-    items.save()
-    print('this is POST method')
-    print(items.status)
-  else:
-    print(items.status)
-    items.status = "Absent"
-    items.save()
-    print('this is not post method')
-    print(items.status)
+    if cnt.count % 4 == 0:
+      item3.status = "Free"
+      item4.status = "Free"
+      item5.status = "Free"
+      item6.status = "Free"
+      item3.save()    
+      item4.save()    
+      item5.save()    
+      item6.save()    
+    elif cnt.count % 4 == 1:
+      item3.status = "Absent"
+      item4.status = "Absent"
+      item5.status = "Absent"
+      item6.status = "Absent"
+      item3.save()    
+      item4.save()    
+      item5.save()    
+      item6.save()    
+    elif cnt.count % 4 == 2:
+      item3.status = "Attend"
+      item4.status = "Attend"
+      item5.status = "Attend"
+      item6.status = "Attend"
+      item3.save()    
+      item4.save()    
+      item5.save()    
+      item6.save()  
+    elif cnt.count % 4 == 3:
+      item3.status = "Attend"
+      item4.status = "Absent"
+      item5.status = "Attend"
+      item6.status = "Absent"
+      item3.save()    
+      item4.save()    
+      item5.save()    
+      item6.save()  
+    cnt.count += 1
+    cnt.save()
+    print (cnt.count)
+
+  # else:
+  #       items.status = "Absent"
+  #   items.save()
 
   return render(request, 'upload_img.html',)
 
