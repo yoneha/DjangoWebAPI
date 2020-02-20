@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import User, Entry, SeatInfo, Image
+from .models import User, Entry, SeatInfo, Image, ImageModel
 
 
 @admin.register(User)
@@ -16,5 +16,9 @@ class Entry(admin.ModelAdmin):
     pass
 
 @admin.register(Image)
+class Entry(admin.ModelAdmin):
+    pass
+
+@admin.register(ImageModel)
 class Entry(admin.ModelAdmin):
     pass

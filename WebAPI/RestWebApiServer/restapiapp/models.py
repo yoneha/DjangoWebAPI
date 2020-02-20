@@ -40,6 +40,10 @@ class SeatInfo(models.Model):
     attribute = models.CharField(choices=ATTRIBUTE_SET, default=STATUS_SEAT, max_length=50)
     status = models.CharField(choices=STATUS_SET, default=STATUS_SEAT, max_length=50)
 
+class ImageModel(models.Model):
+    title = models.CharField(max_length=100)
+    images = models.ImageField(upload_to='')
+
 
 class Image(models.Model):
     STATUS_DRAFT = "draft"

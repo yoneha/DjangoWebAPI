@@ -9,10 +9,13 @@ from .views import UserViewSet, EntryViewSet, SeatInfoViewSet, ImageViewSet
 # urlpatterns = router.urls
 
 from django.urls import path
-from .views import seats_info, sitting_status_info, schedule_info
+from .views import seats_info, sitting_status_info, schedule_info, upload_img
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('seatinfo/shinyoko13FS', seats_info),
     path('sittingstatus', sitting_status_info),
     path('schedule', schedule_info),
-]
+    path('uploadImg', upload_img),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #開発用コード 画像ファイルの扱い

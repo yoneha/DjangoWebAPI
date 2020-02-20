@@ -20,7 +20,11 @@ class SeatInfoViewSet(viewsets.ModelViewSet):
 
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+from django.shortcuts import render
 import json
+
+def upload_img(request):
+  return render(request, 'upload_img.html',)
 
 
 @api_view(['GET'])
