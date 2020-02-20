@@ -83,6 +83,16 @@ def seats_info(request):
         "name": items[9].name,
         "attribute": items[9].attribute
       },
+      {
+        "id": items[10].seatID,
+        "name": items[10].name,
+        "attribute": items[10].attribute
+      },
+      {
+        "id": items[11].seatID,
+        "name": items[11].name,
+        "attribute": items[11].attribute
+      },
     ]
   }
   
@@ -146,6 +156,16 @@ def sitting_status_info(request):
         "id": items[9].seatID,
         "updatetime": "1570242891",
         "state": items[9].status
+      },
+      {
+        "id": items[10].seatID,
+        "updatetime": "1570242891",
+        "state": items[10].status
+      },
+      {
+        "id": items[11].seatID,
+        "updatetime": "1570242891",
+        "state": items[11].status
       },
     ]
   }
