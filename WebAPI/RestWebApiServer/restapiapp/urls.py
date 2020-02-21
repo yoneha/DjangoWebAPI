@@ -17,5 +17,5 @@ urlpatterns = [
     path('seatinfo/shinyoko13FS', seats_info),
     path('sittingstatus', sitting_status_info),
     path('schedule', schedule_info),
-    path('uploadImg', upload_img),
+    # path('uploadImg', upload_img),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #開発用コード 画像ファイルの扱い
